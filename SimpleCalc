@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class SimpleCalc {
+	
+	public static void main(String[] args) {   
+		System.out.println("Enter expressions such as 2 + 2 or 34.2 * 7.81 using any of the operators +, -, * , /. \n To end enter a 0");
+		Scanner input= new Scanner(System.in);
+	       float num1,num2;
+	       String operator;
+	        num1 = input.nextFloat();
+	        if ( num1 !=0  ) {
+	        operator = input.next();
+	      num2 = input.nextFloat();
+	
+	        
+		do {    
+				if (operator.contentEquals("+"))
+					System.out.println("Value is " + (num1 + num2));
+				if (operator.contentEquals("*"))
+					System.out.println("Value is " + (num1 * num2));
+				if (operator.contentEquals("-"))
+					System.out.println("Value is " + (num1 - num2));
+				if (operator.contentEquals("/"))
+					System.out.println("Value is " + (num1 / num2));
+				 input= new Scanner(System.in);
+				   num1 = input.nextFloat();
+				   if ( num1 ==0  ) {System.out.println("Goodbye " );break;}
+			        operator = input.next();
+			      num2 = input.nextFloat();
+		   }
+	    while ( num1 !=0);}
+	    	
+		 else {System.out.println("Goodbye " );}
+	
+	}
+  
